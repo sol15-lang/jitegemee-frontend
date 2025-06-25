@@ -1,69 +1,93 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCoursesStore = defineStore('courses', () => {
- const courses= ref([
-    {
-        name:"Computer Science",
-        school:"School of Computing and Engineering",
-        description:"Best course for Computer enthusiasts",
-        intake:"July 2025"
-    },
-    {
-        name:"Medicine",
-        school:"School of Medicine and Surgery",
-        description:"Best course for learning human Anatomy",
-        intake:"September 2025"
-    },
-    {
-        name:"Data Science and IT",
-        school:"School of Business",
-        description:"Makes data make sense",
-        intake:"July 2025"
-    },
-    {
-        name:"Mechanical Engineering",
-        school:"School of Computing and Engineering",
-        description:"Help build a better future.",
-        intake:"September 2025"
-    },
-    {
-        name:"Buisiness and IT",
-        school:"School of Business",
-        description:"The best of both IT and Buisness",
-        intake:"September 2025"
-    },
-    {
-        name:"Telecommunication and Information Engineering",
-        school:"School of Computing and Engineering",
-        description:"Help make the world a smaller place ",
-        intake:"September 2025"
-    },
-    {
-        name:"Architecture",
-        school:"School of Architecture",
-        description:"Design the structures of the future",
-        intake:"September 2025"
-    },
-    {
-        name:"Communication",
-        school:"School of Communication",
-        description:"Make Communication easy",
-        intake:"September 2025"
-    },
-    {
-        name:"Electrical and Electronics Engineering",
-        school:"School of Computing and Engineering",
-        description:"Understand elestricity better than anyone",
-        intake:"September 2025"
-    },
-    {
-        name:"Software Engineering",
-        school:"School of Computing and Engineering",
-        description:"Makes software work",
-        intake:"September 2025"
-    },
-])
+export const useCoursesStore = defineStore('courses',  {
+    state: () => {
+        const courses = ref([
+            {
+                id: 1,
+                name: "Computer Science",
+                school: "School of Computing and Engineering",
+                description: "Best course for computer enthusiasts",
+                intake: "July 2025"
+            },
+            {
+                id: 2,
+                name: "Medicine",
+                school: "School of Medicine and Surgery",
+                description: "Best course for learning about the human body",
+                intake: "September 2025"
+            },
+            {
+        
+                id: 3,
+                name: "Data Science and Statistics",
+                school: "Institute of Mathematics",
+                description: "Make data make sense",
+                intake: "July 2025"
+            },
+            {
+                id: 4,
+                name: "Mechanical Engineering",
+                school: "School of Computing and Engineering",
+                description: "Best course for machinery",
+                intake: "July 2025"
+            },
+            {
+                id: 5,
+                name: "Business and IT",
+                school: "School of Computing and Engineerings",
+                description: "How to combine IT in Business",
+                intake: "April 2026"
+            },
+            {
+                id: 6,
+                name: "Architecture",
+                school: "Institute of Mathematics",
+                description: "Learn to design the best architecture",
+                intake: "July 2025"
+            },
+            {
+                id: 7,
+                name: "Communications",
+                school: "School of Humanities and Social Sciences",
+                description: "Learn to be a good communicator",
+                intake: "July 2025"
+            },
+            {
+                id: 8,
+                name: "Hospitality and Tourism",
+                school: "School of Hospitality and Tourism",
+                description: "Service industry made better",
+                intake: "September 2025"
+            },
+            {
+                id: 9,
+                name: "Financial Engineering",
+                school: "Institute of Mathematics",
+                description: "Best for finance enthusiasts",
+                intake: "July 2025"
+            },
+            {
+                id: 10,
+                name: "Law",
+                school: "School of Law",
+                description: "Make law make sense",
+                intake: "April 2026"
+            },
+        
+        ])
+        const selectedCourse = ref(0)
 
-  return {courses}
+        return{
+            courses,
+            selectedCourse
+        }
+    }, 
+    actions:{
+        updateSelectedCourse (payload) {
+            this.selectedCourse = payload
+        }
+    }
 })
+
