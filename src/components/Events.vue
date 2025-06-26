@@ -4,7 +4,6 @@ import { useEventsStore } from "../stores/events";
 const eventsStore = useEventsStore();
 const events = eventsStore.events;
 </script>
-
 <template>
   <v-container>
     <v-row>

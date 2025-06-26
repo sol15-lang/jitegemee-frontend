@@ -28,7 +28,7 @@ function apply(courseId) {
             {{ course.intake }}
           </v-card-text>
           <v-card-actions>
-            <v-btn color="primary" @click="apply">Apply</v-btn>
+            <v-btn color = "primary" @click="apply(course.id)"> Apply </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

@@ -39,7 +39,7 @@ function saveData(){
 <template>
   <v-container>
     <v-row>
-      <p>You are applying for{{ selectedCourse.name}}  , the next intake is in {{selectedCourse.intake }} </p>
+      <p>You are applying for {{ selectedCourse.name}}  , the next intake is in {{selectedCourse.intake }} </p>
     </v-row>
   </v-container>
   <!--Form-->
