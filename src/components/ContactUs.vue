@@ -2,6 +2,7 @@
 import {ref} from 'vue';
 //model(to uniquely identify each text field)
 const firstName =defineModel('firstName')
+const lastName =defineModel('lastName')
 const emailAddress =defineModel('emailAddress')
 const phoneNumber = defineModel('phoneNumber')
 const subject = defineModel('subject')
