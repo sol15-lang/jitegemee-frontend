@@ -51,6 +51,7 @@ function saveData(){
   </v-container>
   <v-container><v-row>
     <p>Don't have an account ? <router-link to="/signup">Sign Up</router-link></p>
+    <p>Go to welcome page.<router-link to="/welcomepage">Sign Up</router-link></p>
   </v-row></v-container>
   
 </template>

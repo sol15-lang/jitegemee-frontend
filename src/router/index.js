@@ -9,6 +9,7 @@ import Library from "../components/Library.vue";
 import LogIn from "../components/LogIn.vue";
 import StudentLife from "../components/StudentLife.vue";
 import SignUp from "../components/SignUp.vue";
+import WelcomePage from "../components/WelcomePage.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -58,9 +59,14 @@ const router = createRouter({
       component: StudentLife,
     },
     {
-    path: '/signup',
-    name: 'SignUp',
-    component: SignUp
+      path: "/signup",
+      name: "SignUp",
+      component: SignUp,
+    },
+    {
+      path: "/welcomepage",
+      name: "WelcomePage",
+      component: WelcomePage,
     },
   ],
 });
