@@ -1,8 +1,11 @@
 <script setup>
-import { ref } from "vue";
+import {ref, onMounted} from 'vue'
 import { useEventsStore } from "../stores/events";
 const eventsStore = useEventsStore();
 const events = eventsStore.events;
+onMounted(()=>{
+  eventsStore.fetchEvents();
+});
 </script>
 <template>
   <v-container>

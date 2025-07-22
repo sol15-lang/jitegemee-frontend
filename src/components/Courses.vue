@@ -1,14 +1,20 @@
 <script setup>
-import { ref } from "vue";
+import {ref, onMounted} from 'vue'
 import { useCoursesStore } from "../stores/courses";
-import { useRouter } from "vue-router";
+import { useRouter } from "vue-router"
+
 const router = useRouter();
 const coursesStore = useCoursesStore();
 const courses = coursesStore.courses;
+
+onMounted(()=>{
+  coursesStore.fetchCourses();
+});
 function apply(courseId) {
   coursesStore.updateSelectedCourse(courseId);
   router.push("/apply");
 }
+
 </script>
 
 <template>

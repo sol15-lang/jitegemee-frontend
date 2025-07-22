@@ -9,6 +9,7 @@
     <v-btn to="/studentlife" color="#E1F5FE"> Student Life </v-btn>
     <v-btn to="/library" color="#E1F5FE"> Library </v-btn>
     <v-btn to="/contactus" color="#E1F5FE"> Contact Us </v-btn>
+    <v-btn to="/signup" color="#E1F5FE"> Sign Up </v-btn>
     <v-btn to="/login" color="#E1F5FE"> Log In </v-btn>
   </v-app-bar>
 </template>
